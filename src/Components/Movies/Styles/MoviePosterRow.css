@@ -1,0 +1,91 @@
+#poster {
+    width: 100%;
+    background-color: #000;
+}
+
+.movie-row {
+    padding: 2%;
+    color: #fff;
+}
+
+.posters {
+    display: flex;
+    margin-top: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.posters::-webkit-scrollbar {
+    display: none;
+}
+
+.big-poster {
+    max-width: 20rem;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.small-poster {
+    cursor: pointer;
+    max-width: 17rem;
+    margin: 0 10px 0 0;
+    transition: .3s;
+}
+
+.big-poster:hover {
+    transform: scale(1.04);
+}
+
+.small-poster:hover {
+    transform: scale(1.07);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded .small-poster,
+.lazy-load-image-background.blur.lazy-load-image-loaded .big-poster {
+    transition: 0.5s;
+}
+
+#row-youtube {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row-video-container {
+    background-color: #000;
+    width: 70%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#row-youtube iframe {
+    width: 100%;
+}
+
+@media screen and (max-width: 675px) {
+
+    .big-poster {
+        max-width: 15rem;
+        margin: 0 10px 0 0;
+
+    }
+
+    .small-poster {
+        max-width: 12rem;
+        margin: 0 10px 0 0;
+    }
+
+    .row-video-container {
+        width: 98%;
+    }
+
+}
+
+@media screen and (min-width: 676px) and (max-width: 1024px) {
+
+    .row-video-container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,133 @@
+#accordion {
+    background-color: black;
+    width: 100%;
+    margin-top: 8px;
+    padding: 5vh 6%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.accordion-container {
+    padding: 4% 9vw;
+    width: 100%;
+}
+
+#accordion h5 {
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.question-container,
+.answer-container {
+    background-color: #303030;
+    padding: 1.6rem 2.2rem;
+    font-size: 1.625rem;
+}
+
+.question-container {
+    margin-bottom: 8px;
+}
+
+.answer-container {
+    margin-top: -6px;
+    margin-bottom: 8px;
+}
+
+.question-container span {
+    float: right;
+    margin-top: 2px;
+}
+
+.start-button {
+    background: red;
+    color: #fff;
+    border-radius: 2px;
+    font-size: x-large;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.start-button span {
+    font-size: large;
+    margin-left: 6px;
+}
+
+.start-button .page-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.start-button:hover {
+    background-color: #e20a0a;
+}
+
+@media screen and (max-width: 950px) {
+
+    .question-container,
+    .answer-container {
+        font-size: 1.25rem;
+        padding: 1rem 1.3rem;
+    }
+
+    .title {
+        font-size: 2.7rem;
+    }
+
+    #accordion h5 {
+        font-size: 20px;
+    }
+
+    .start-button {
+        font-size: large;
+        padding: 0.7rem;
+    }
+
+    .start-button span {
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #accordion {
+        padding: 5vh 0%;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .accordion-container {
+        padding: 4% 0vw;
+    }
+
+    .question-container,
+    .answer-container {
+        font-size: 1.1rem;
+        padding: 1rem 1.3rem;
+    }
+
+    #accordion h5 {
+        font-size: 17.5px;
+    }
+
+    .start-button {
+        font-size: medium;
+        padding: 0.5rem;
+    }
+
+    .start-button span {
+        font-size: smaller;
+    }
+
+}

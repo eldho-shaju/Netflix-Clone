@@ -1,0 +1,111 @@
+.landing-page-container {
+    background: linear-gradient(180deg, #000, rgb(37 37 37 / 50%), #000);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.landing-banner-img {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -3;
+    background-image: url('../../../Asset/netflix-banner.jpg');
+}
+
+.content-box {
+    color: #fff;
+    position: absolute;
+    max-width: 40rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box h1 {
+    font-size: xxx-large;
+    margin-bottom: 1rem;
+}
+
+.content-box h4 {
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.content-box h6 {
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 0.8rem;
+}
+
+.content-box .start-button {
+    background: red;
+    color: #fff;
+    border-radius: 2px;
+    font-size: x-large;
+    cursor: pointer;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.start-button span {
+    font-size: large;
+    margin-left: 6px;
+}
+
+.start-button .page-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-box .start-button:hover {
+    background-color: #e20a0a;
+}
+
+@media screen and (max-width: 675px) {
+    .content-box {
+        max-width: 25rem;
+    }
+
+    .content-box h1 {
+        font-size: xx-large;
+    }
+
+    .content-box h4 {
+        font-size: 1.425rem;
+        font-weight: 400;
+    }
+
+    .content-box h6 {
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+
+    .content-box .start-button {
+        padding: 0.5rem;
+        font-size: medium;
+    }
+
+    .content-box .start-button span {
+        font-size: smaller;
+        margin-left: 6px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .content-box .start-button {
+        font-size: large;
+        padding: 0.7rem;
+    }
+
+    .content-box .start-button span {
+        font-size: small;
+    }
+
+}

@@ -1,0 +1,79 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 5.5rem;
+    padding: 2% 4% 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    object-fit: cover;
+    max-width: 10rem;
+}
+
+.logo {
+    width: 100%;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 14rem;
+}
+
+.sign-in {
+    height: 2.5rem;
+    width: 5rem;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 675px) {
+    .container {
+        margin-top: 0.5rem;
+    }
+
+    .logo {
+        width: 60%
+    }
+
+    .button-box {
+        width: 11rem;
+    }
+
+    .sign-in {
+        width: 3.5rem;
+        font-size: 0.8rem;
+        height: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .logo-box {
+        max-width: 8rem;
+    }
+
+    .button-box {
+        width: 6rem;
+    }
+
+    .sign-in {
+        width: 2.1rem;
+        font-size: 0.6rem;
+        height: 1rem;
+    }
+}

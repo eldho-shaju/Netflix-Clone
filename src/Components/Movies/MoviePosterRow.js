@@ -32,11 +32,9 @@ const MoviePosterRow = ({ title, fetchUrl, isSmall }) => {
         .then((Response) => {
           const result = Response.data.results
           if (result.length !== 0) {
-            const movieVideo = result.find(element => {
-              if (element.type === "Trailer" || element.type === "Teaser") {
-                return element
-              }
-            });
+            const movieVideo = result.find(element =>
+              element.type === "Trailer" || element.type === "Teaser"
+            );
             setTrailer(movieVideo)
           }
         }).catch((error) => {
@@ -59,14 +57,20 @@ const MoviePosterRow = ({ title, fetchUrl, isSmall }) => {
           {movies?.map((movie) => {
             const { backdrop_path, id, title, poster_path } = movie
             return (
-              <LazyLoadImage
-                effect="blur"
-                key={id}
-                className={isSmall ? "small-poster" : "big-poster"}
-                src={`${imageUrl}${isSmall ? backdrop_path : poster_path}`}
-                alt={title}
-                onClick={() => openMovieTrailer(movie)}
-              />
+              <div key={id}>
+                {
+                  !backdrop_path || !poster_path ?
+                    <div/> :
+                    <LazyLoadImage
+                      effect="blur"
+                      
+                      className={isSmall ? "small-poster" : "big-poster"}
+                      src={`${imageUrl}${isSmall ? backdrop_path : poster_path}`}
+                      alt={title}
+                      onClick={() => openMovieTrailer(movie)}
+                    />
+                }
+              </div>
             )
           })}
         </div>

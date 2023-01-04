@@ -5,7 +5,7 @@ import { MainFooter } from "../Components/Main/Index/Index";
 
 const Home = () => {
     return (
-        <div>
+        <div id='home'>
             <LandingBannerPage />
             <LandingDeviceInfo />
             <Accordion />

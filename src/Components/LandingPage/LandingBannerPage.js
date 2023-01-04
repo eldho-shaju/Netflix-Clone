@@ -13,7 +13,7 @@ const LandingBannerPage = () => {
         <h4>Watch anywhere. Cancel anytime.</h4>
         <h6>Ready to watch? Enter your email to create or restart your membership.</h6>
         <div className='start-button'>
-          <Link to="/movies" className='page-link'>
+          <Link to="/Netflix-clone/movies" className='page-link'>
             Get Started
             <span>
               <Icon icon={arrowForwardIos} />

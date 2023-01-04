@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useLayoutEffect, useMemo, useState } from "react";
 import { API_KEY, imageUrl } from "../../Constants/Constant";
 import axios from "../../axios";
 import YoutubePlayer from "./YoutubePlayer";
@@ -30,11 +30,9 @@ const MovieBanner = () => {
       .then((Response) => {
         const result = Response.data.results
         if (result.length !== 0) {
-          const movieVideo = result.find(element => {
-            if (element.type === "Trailer" || element.type === "Teaser") {
-              return element
-            }
-          });
+          const movieVideo = result.find(element =>
+            element.type === "Trailer" || element.type === "Teaser"
+          );
           setTrailer(movieVideo)
         }
       }).catch((error) => {
@@ -42,7 +40,7 @@ const MovieBanner = () => {
       })
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     trailer ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
   }, [trailer])
 

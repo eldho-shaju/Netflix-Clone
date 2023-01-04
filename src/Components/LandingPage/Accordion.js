@@ -59,7 +59,7 @@ const Accordion = () => {
             </div>
             <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
             <div className='start-button'>
-                <Link to="/movies" className='page-link'>
+                <Link to="/Netflix-clone/movies" className='page-link'>
                     Get Started
                     <span><Icon icon={arrowForwardIos} /></span>
                 </Link>

@@ -9,7 +9,7 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo-box">
-          <Link to="/">
+          <Link to="/Netflix-clone">
             <img
               className="logo"
               src={NetflixFullLogo}

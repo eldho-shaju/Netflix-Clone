@@ -55,20 +55,20 @@ const MoviePosterRow = ({ title, fetchUrl, isSmall }) => {
         <h2>{title}</h2>
         <div className="posters">
           {movies?.map((movie) => {
-            const { backdrop_path, id, title, poster_path } = movie
+            const { backdrop_path, id, title, poster_path, overview } = movie
             return (
               <div key={id}>
-                {
-                  !backdrop_path || !poster_path ?
-                    <div/> :
-                    <LazyLoadImage
-                      effect="blur"
-                      
-                      className={isSmall ? "small-poster" : "big-poster"}
-                      src={`${imageUrl}${isSmall ? backdrop_path : poster_path}`}
-                      alt={title}
-                      onClick={() => openMovieTrailer(movie)}
-                    />
+                <LazyLoadImage
+                  className={isSmall ? "small-poster" : "big-poster"}
+                  src={`${imageUrl}${isSmall ? backdrop_path : poster_path}`}
+                  alt=''
+                  onClick={() => openMovieTrailer(movie)}
+                />
+                {backdrop_path === null &&
+                  <div className={isSmall ? 'small-skeleton' : 'big-skeleton'} >
+                    <p className="skeleton-title">{title}</p>
+                    <p className="skeleton-overview">{overview}</p>
+                  </div>
                 }
               </div>
             )

@@ -23,6 +23,7 @@
     max-width: 20rem;
     margin: 0 10px 0 0;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .small-poster {
@@ -43,6 +44,53 @@
 .lazy-load-image-background.blur.lazy-load-image-loaded .small-poster,
 .lazy-load-image-background.blur.lazy-load-image-loaded .big-poster {
     transition: 0.5s;
+}
+
+.small-skeleton {
+    position: relative;
+    background-color: #494949;
+    overflow: hidden;
+    width: 17rem;
+    height: 9.5rem;
+    margin-right: 8px;
+    margin-top: -20px;
+    padding: 8px;
+    text-align: center;
+    overflow: auto;
+}
+
+.small-skeleton::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: 2s small-skeleton linear 0.5s infinite;
+    background: linear-gradient(90deg, transparent, #a5a3a32b, transparent);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+@keyframes small-skeleton {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    60% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skeleton-overview {
+    font-size: 0.6rem;
 }
 
 #row-youtube {
@@ -75,6 +123,15 @@
     .small-poster {
         max-width: 12rem;
         margin: 0 10px 0 0;
+    }
+
+    .small-skeleton {
+        width: 12rem;
+        height: 6.7rem;
+    }
+
+    .skeleton-title {
+        font-size: 0.8rem;
     }
 
     .row-video-container {

@@ -5,7 +5,7 @@
 
 .movie-row {
     color: #fff;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .movie-row h2 {
@@ -14,10 +14,10 @@
 
 .posters {
     display: flex;
-    margin: 1rem 0rem;
+    margin-top: 1rem;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: 1rem 2%;
+    padding: 1rem 2% 2rem 2%;
 }
 
 .posters::-webkit-scrollbar {

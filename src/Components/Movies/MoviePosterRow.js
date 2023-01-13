@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../axios";
 import { API_KEY, imageUrl } from "../../Constants/Constant";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+//import { LazyLoadImage } from 'react-lazy-load-image-component';
+//import 'react-lazy-load-image-component/src/effects/blur.css';
 import "./Styles/MoviePosterRow.css";
 import YouTube from "react-youtube";
 
@@ -58,7 +58,7 @@ const MoviePosterRow = ({ title, fetchUrl, isSmall }) => {
             const { backdrop_path, id, title, poster_path, overview } = movie
             return (
               <div key={id}>
-                <LazyLoadImage
+                <img
                   className={isSmall ? "small-poster" : "big-poster"}
                   src={`${imageUrl}${isSmall ? backdrop_path : poster_path}`}
                   alt=''

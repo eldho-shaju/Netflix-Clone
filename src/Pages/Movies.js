@@ -1,5 +1,5 @@
 import React from 'react'
-import { MovieBanner, MovieList } from '../Components/Movies/Index.js/MovieIndex'
+import { MovieBanner, MovieList } from '../Components/Movies/Index.js/index'
 
 const Movies = () => { 
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { MainNavBar } from "./Components/Main/Index/Index";
+import { MainNavBar } from "./Components/Main/Index/index";
 import Home from "./Pages/Home";
 import Movies from "./Pages/Movies";
 import ScrollToTop from "./ScrollToTop";

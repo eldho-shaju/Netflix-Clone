@@ -1,6 +1,6 @@
 import React from 'react'
-import { Accordion, LandingBannerPage, LandingDeviceInfo } from '../Components/LandingPage/Index/Index'
-import { MainFooter } from "../Components/Main/Index/Index";
+import { Accordion, LandingBannerPage, LandingDeviceInfo } from '../Components/LandingPage/Index/index'
+import { MainFooter } from "../Components/Main/Index/index";
 
 
 const Home = () => {

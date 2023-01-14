@@ -24,10 +24,14 @@
     display: none;
 }
 
+.image-box {
+    margin: 0 10px 0 0;
+}
+
 .big-poster {
     max-width: 20rem;
-    margin: 0 10px 0 0;
     cursor: pointer;
+    object-fit: cover;
     transition: 0.5s;
     border-radius: 5px;
 }
@@ -35,9 +39,9 @@
 .small-poster {
     cursor: pointer;
     max-width: 17rem;
-    margin: 0 10px 0 0;
     border-radius: 5px;
     transition: .3s;
+    object-fit: cover;
 }
 
 .big-poster:hover {
@@ -66,6 +70,9 @@
     overflow: auto;
     border-radius: 5px;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .small-skeleton:hover {

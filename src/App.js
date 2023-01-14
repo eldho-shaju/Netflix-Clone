@@ -13,7 +13,7 @@ function App() {
         <ScrollToTop>
           <MainNavBar />
           <Routes>
-            <Route index path="/Netflix-clone" element={<Home />} />
+            <Route path="/Netflix-clone" element={<Home />} />
             <Route path="/Netflix-clone/movies" element={<Movies />} />
           </Routes>
         </ScrollToTop>
